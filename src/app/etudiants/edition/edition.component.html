@@ -1,0 +1,11 @@
+<section>
+  <form>
+    <label for="nom">Nom</label>
+    <input name="nom" placeholder="Nom" [(ngModel)]="etuService.listeEtudiants[index].nom">
+    <label for="prenom">Prénom</label>
+    <input name="prenom" placeholder="Prénom" [(ngModel)]="etuService.listeEtudiants[index].prenom">
+
+    <input type="reset" value="Annuler">
+    <input type="submit" value="Envoyer">
+  </form>
+</section>

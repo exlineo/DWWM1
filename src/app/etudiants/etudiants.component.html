@@ -1,0 +1,17 @@
+<table>
+	<tr id="tr">
+		<td>Nom</td>
+		<td>Prenom</td>
+		<td>Age</td>
+		<td>Email</td>
+	</tr>
+	<tr *ngFor='let eleve of etuService.listeEtudiants; let i=index'>
+
+		<td>{{eleve.prenom}}</td>
+		<td>{{eleve.nom}}</td>
+		<td>{{eleve.age}}</td>
+		<td>{{eleve.email}}</td>
+		<td><a href [routerLink]="['/edition', i]">edit</a></td>
+	</tr>
+</table>
+
