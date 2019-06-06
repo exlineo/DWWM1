@@ -11,7 +11,12 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { EtudiantsService } from './services/etudiants.service';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { EditionComponent } from './etudiants/edition/edition.component';
+
 import { EditionService } from './services/edition.service';
+import { AuthService } from './services/auth.service';
+import { AuthGuard } from './services/auth.guard';
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,10 +31,10 @@ import { EditionService } from './services/edition.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
-
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [EtudiantsService, EditionService],
+  providers: [EtudiantsService, EditionService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

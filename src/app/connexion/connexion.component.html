@@ -1,8 +1,10 @@
-<form (submit)="submitAuth()">
+<form (submit)="submitAuth()" *ngIf="!authServ.ok">
 	<label for="user">User : </label>
-	<input type="text" name="user" [(ngModel)]="auth.id" minlength="8" (input)="submitAuth()" required placeholder="User">
+	<input type="text" name="user" [(ngModel)]="auth.id" minlength="8" required placeholder="User">
 	<label for="pwd">Password : </label>
 	<input type="password" name="pwd" [(ngModel)]="auth.mdp" required placeholder="Password">
-	<input type="submit" name="connexion"  value="Connexion">
-	<input type="button" name="deconnexion" value="Déconnexion">
+	<input type="submit" name="connexion" value="Connexion">
+	<input type="reset" name="annuler" value="Annuler">
 </form>
+
+<input type="button" name="deconnexion" *ngIf="authServ.ok" (click)="init()" value="Déconnexion">

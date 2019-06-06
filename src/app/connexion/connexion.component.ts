@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-connexion',
@@ -6,16 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./connexion.component.css']
 })
 export class ConnexionComponent implements OnInit {
-auth;
-  constructor() { }
+
+  auth;
+
+  constructor(public authServ: AuthService) { }
 
   ngOnInit() {
-  	this.auth = {
-  		id:'',
-  		mdp:''
-  	}
+    this.auth = {
+      id: '',
+      mdp: ''
+    }
   }
-submitAuth(){
-	console.log(this.auth)
-}
+  submitAuth() {
+    console.log(this.auth);
+    this.authServ.ok = true;
+  }
+  init() {
+    this.authServ.ok = false;
+  }
 }
