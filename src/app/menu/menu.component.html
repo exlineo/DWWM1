@@ -6,8 +6,25 @@
 		<li>
 			<a href routerLink="etudiants">Etudiants</a>
 		</li>
-		<li>
+		<li *ngIf="authServ.ok">
 			<a href routerLink="edition">Edition</a>
+		</li>
+		<li *ngIf="authServ.ok">
+			<a href routerLink="socialnet">Social Net</a>
+			<ul>
+				<li>
+				<a href routerLink="socialnet/profil">Profil</a>
+			</li>
+			<li>
+				<a href routerLink="socialnet/chat">Chat</a>
+			</li>
+			</ul>
+		</li>
+		<li *ngIf="authServ.ok">
+			<a href routerLink="intranet">Intranet</a>
+			<ul>
+				<a href routerLink="intranet/utilisateurs">Utilisateurs</a>
+			</ul>
 		</li>
 		<li>
 			<a href routerLink="connexion">Connexion</a>

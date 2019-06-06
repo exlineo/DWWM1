@@ -5,3 +5,13 @@
 .ng-invalid{
     border:1px solid red;
 }
+
+form{
+    display:flex;
+    flex-flow:column wrap;
+}
+input, select, option, textarea{
+    padding:5px 8px;
+    max-width:200px;
+    margin:auto;
+}

@@ -1,13 +1,13 @@
 <section>
   <h2>Editer un étudiant</h2>
-  <select (change)="index = i">
+  <select>
     <option *ngFor="let e of etuService.listeEtudiants; let i = index" value="i">{{ e.nom }}</option>
   </select>
-  <form>
-    <input name="nom" [(ngModel)]="etuService.listeEtudiants[index].nom" required>
-    <input name="prenom" [(ngModel)]="etuService.listeEtudiants[index].prenom" required> 
-    <input name="age" [(ngModel)]="etuService.listeEtudiants[index].age" required> 
-    <input name="email" type="email" [(ngModel)]="etuService.listeEtudiants[index].email"> 
+  <form (submit)="valideEtudiant()">
+    <input name="nom" [(ngModel)]="etudiant.nom" required>
+    <input name="prenom" [(ngModel)]="etudiant.prenom" required> 
+    <input name="age" [(ngModel)]="etudiant.age" required> 
+    <input name="email" type="email" [(ngModel)]="etudiant.email"> 
 
     <input type="reset" value="Annuler">
     <input type="submit" value="Envoyer">

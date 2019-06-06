@@ -9,7 +9,7 @@ export class AccueilComponent implements OnInit {
 
 title = 'Ma premier applications';
 soustitre:string='Ceci est ma premier applications en angular'
-img:string='/assets/orange.jpg';
+img:string='./assets/orange.jpg';
 
 constructor() { }
 

@@ -11,6 +11,8 @@ const routes: Routes = [
   {path: 'etudiants',component:EtudiantsComponent},
   {path:'edition', component:EditionComponent, canActivate:[AuthGuard]},
   {path:'edition/:index', component:EditionComponent, canActivate:[AuthGuard]},
+	{path: 'socialnet', loadChildren: () => import('./socialnet/socialnet.module').then(m => m.SocialnetModule), canLoad: [AuthGuard] },
+  {path: 'intranet', loadChildren: () => import('./intranet/intranet.module').then(m => m.IntranetModule), canLoad: [AuthGuard] },
   {path:'connexion',component:ConnexionComponent}
 ];
 

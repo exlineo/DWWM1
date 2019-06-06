@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{K7AO:function(n,o,t){"use strict";t.r(o),t.d(o,"SocialnetModule",function(){return u});var u=function(){return function(){}}()}}]);

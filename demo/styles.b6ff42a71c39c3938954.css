@@ -1,0 +1,1 @@
+.ng-valid{border:1px solid green}.ng-invalid{border:1px solid red}form{display:flex;flex-flow:column wrap}input,option,select,textarea{padding:5px 8px;max-width:200px;margin:auto}
